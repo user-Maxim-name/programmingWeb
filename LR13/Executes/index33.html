@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пітула ПІ-1901</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #images {
+
+        width: 50%;
+        min-height: 150px;
+        border: 1px solid black;
+        margin: 0 auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+
+    }
+
+    #images div {
+        width: 100%;
+        min-height: 270px;
+        border: 1px solid black;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<body>
+
+    <div id="images">
+        <div class="images_item"></div>
+        <div class="images_item"></div>
+        <div class="images_item"></div>
+
+
+    </div>
+
+
+    <script>
+
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+
+        const arrImages = [
+            "https://image.cnbcfm.com/api/v1/image/106878527-1620223837055-106748412-1602881184740-biden.jpg?v=1620224062",
+            "https://www.president.gov.ua/storage/j-image-storage/14/34/45/b6638a3f2f9eb132a2315e2bebabcd3e_1572854231_wysiwyg.jpeg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Sir_Winston_Churchill_-_19086236948.jpg/274px-Sir_Winston_Churchill_-_19086236948.jpg",
+            "https://globalmsk.ru/usr/person/big-person-15632637181.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/cd/%D0%A7%D0%BE%D1%80%D0%BD%D0%BE%D0%B2%D1%96%D0%BB_%D0%92%D1%8F%D1%87%D0%B5%D1%81%D0%BB%D0%B0%D0%B2.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/SBandera.jpg/274px-SBandera.jpg",
+            "https://m.day.kyiv.ua/sites/default/files/main/articles/27062013/1konovalec.jpg",
+            "https://i.pinimg.com/474x/a9/7e/70/a97e70dad653eef4b47a73c484449b77.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Symon_Petlura._Photo_1920s.jpg/250px-Symon_Petlura._Photo_1920s.jpg",
+            "http://ic.pics.livejournal.com/hytec/65647548/10878/10878_900.jpg"
+        ];
+
+        const containerImages = document.getElementById('images');
+
+        containerImages.addEventListener('mouseover', (event) => {
+            let element = event.target;
+
+
+            if (!element.classList.contains("images_item")) return false;
+
+            let index = Number.parseInt(getRandomArbitrary(0, arrImages.length));
+
+            element.style.backgroundImage = `url(${arrImages[index]})`;
+
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

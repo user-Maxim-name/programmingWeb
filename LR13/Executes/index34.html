@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пітула ПІ-1901</title>
+</head>
+
+
+<style>
+    div {
+
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 0 auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+
+<body>
+
+    <div>
+
+
+
+    </div>
+    <button id="prev">Prev</button>
+    <button id="next">Next</button>
+
+
+    <script>
+
+        const arrImages = [
+            "https://c4.wallpaperflare.com/wallpaper/467/922/553/adidas-backgrounds-for-laptop-wallpaper-preview.jpg",
+            "https://images.complex.com/complex/images/c_crop,h_2921,w_5193,x_772,y_440/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/qsdrtn3exos5qn5zkvg8/air-jordan-1-chicago?fimg-ssr-default",
+            "https://www.vans.com.au/media/catalog/product/cache/2f9039965fa8ae9fd28925d9694bfc02/v/n/vn-0d3hy28_vn-0d3hy28_blk_01_20290.jpg",
+            "https://www.consortium.co.uk/media/catalog/product/cache/1/image/040ec09b1e35df139433887a97daa66f/a/d/adidas-yeezy-boost-350-v2-zebra-white-core-black-red-cat.jpg",
+
+        ];
+        let i = 0;
+
+        const areaImage = document.querySelector('div');
+        const btnNextImage = document.getElementById('next');
+        const btnPrevImage = document.getElementById('prev');
+
+
+        areaImage.style.backgroundImage = `url(${arrImages[i]})`;
+
+        btnNextImage.addEventListener('click', (event) => {
+            i++;
+            if (i == arrImages.length) i = 0;
+
+            areaImage.style.backgroundImage = `url(${arrImages[i]})`;
+
+
+        });
+
+        btnPrevImage.addEventListener('click', (event) => {
+
+            if (i == 0) i = arrImages.length;
+            i--;
+
+            areaImage.style.backgroundImage = `url(${arrImages[i]})`;
+
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
