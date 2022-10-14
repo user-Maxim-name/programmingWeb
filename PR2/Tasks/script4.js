@@ -1,6 +1,6 @@
 let bet = +prompt("Введіть ставку");
 
-while (bet <= 0) {
+while (bet <= 0 || isNaN(bet)) {
   alert("Введіть коректну суму");
   bet = +prompt("Введіть ставку");
 }
