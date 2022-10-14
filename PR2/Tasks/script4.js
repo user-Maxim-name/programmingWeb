@@ -1,6 +1,6 @@
 let bet = +prompt("Введіть ставку");
 
-while (!Number.isInteger(bet) || bet <= 0) {
+while (bet <= 0) {
   alert("Введіть коректну суму");
   bet = +prompt("Введіть ставку");
 }
