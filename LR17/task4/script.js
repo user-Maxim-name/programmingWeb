@@ -46,20 +46,25 @@ function initPhotoRotator(identificator, list) {
   btnNext.textContent = "Вперед";
   image.src = list[0].url;
 
+  btnPrev.disabled = true;
+
   btnPrev.addEventListener("click", () => {
+    btnNext.disabled = false;
     i--;
 
-    if (i < 0) i = list.length - 1;
+    if (i == 0) btnPrev.disabled = true;
     numberPhotoFromList.textContent = `Фотографія ${i + 1} з ${list.length}`;
     titleParagraph.textContent = list[i].title;
     descriptionParagraph.textContent = list[i].description;
 
     image.src = list[i].url;
   });
-  btnNext.addEventListener("click", () => {
-    i++;
 
-    if (i >= list.length) i = 0;
+  btnNext.addEventListener("click", () => {
+    btnPrev.disabled = false;
+    i++;
+    if (i == list.length - 1) btnNext.disabled = true;
+
     numberPhotoFromList.textContent = `Фотографія ${i + 1} з ${list.length}`;
 
     titleParagraph.textContent = list[i].title;
