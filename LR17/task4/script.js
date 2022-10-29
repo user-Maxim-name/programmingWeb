@@ -30,16 +30,18 @@ function initPhotoRotator(identificator, list) {
 
   const btnPrev = document.createElement("button");
   const btnNext = document.createElement("button");
+  const titleParagraph = document.createElement("p");
   const descriptionParagraph = document.createElement("p");
 
   headerRotator.classList.add("container_picture");
   leftSide.classList.add("algin_items_center");
   rightSide.classList.add("algin_items_center");
+  titleParagraph.classList.add("title");
+  descriptionParagraph.classList.add("description");
 
   numberPhotoFromList.textContent = `Фотографія ${i + 1} з ${list.length}`;
-  descriptionParagraph.textContent = `${list[0].title} ${"\r\n"} ${
-    list[0].description
-  }`;
+  titleParagraph.textContent = list[0].title;
+  descriptionParagraph.textContent = list[0].description;
   btnPrev.textContent = "Назад";
   btnNext.textContent = "Вперед";
   image.src = list[0].url;
@@ -49,9 +51,9 @@ function initPhotoRotator(identificator, list) {
 
     if (i < 0) i = list.length - 1;
     numberPhotoFromList.textContent = `Фотографія ${i + 1} з ${list.length}`;
-    descriptionParagraph.textContent = `${list[i].title} ${"\r\n"} ${
-      list[i].description
-    }`;
+    titleParagraph.textContent = list[i].title;
+    descriptionParagraph.textContent = list[i].description;
+
     image.src = list[i].url;
   });
   btnNext.addEventListener("click", () => {
@@ -60,9 +62,8 @@ function initPhotoRotator(identificator, list) {
     if (i >= list.length) i = 0;
     numberPhotoFromList.textContent = `Фотографія ${i + 1} з ${list.length}`;
 
-    descriptionParagraph.textContent = `${list[i].title} ${"\r\n"} ${
-      list[i].description
-    }`;
+    titleParagraph.textContent = list[i].title;
+    descriptionParagraph.textContent = list[i].description;
 
     image.src = list[i].url;
   });
@@ -72,6 +73,7 @@ function initPhotoRotator(identificator, list) {
 
   headerRotator.appendChild(numberPhotoFromList);
   headerRotator.appendChild(image);
+  headerRotator.appendChild(titleParagraph);
   headerRotator.appendChild(descriptionParagraph);
 
   rotator.appendChild(leftSide);

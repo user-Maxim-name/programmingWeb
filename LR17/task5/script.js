@@ -56,7 +56,7 @@ inputCaptcha.addEventListener("keyup", (e) => {
     paragraphResult.textContent = "Не правильно";
     paragraphResult.classList.add("incorrect");
   }
-  
+  console.log("key");
 });
 
 function getRandomInt(min, max) {
@@ -97,5 +97,5 @@ function startInitializeCaptcha(countNumbers) {
     correctValue += randomNumber;
     createCaptcha(randomNumber);
   }
-   
+  console.log(correctValue);
 }
