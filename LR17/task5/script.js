@@ -48,10 +48,12 @@ inputCaptcha.addEventListener("keyup", (e) => {
   if (e.target.value.length != correctValue.length) return;
 
   let paragraphResult = e.target.nextElementSibling;
+
   paragraphResult.removeAttribute("class");
-  
+
   if (correctValue == e.target.value) {
     paragraphResult.textContent = "Правильно";
+
     paragraphResult.classList.add("correct");
   } else {
     paragraphResult.textContent = "Не правильно";

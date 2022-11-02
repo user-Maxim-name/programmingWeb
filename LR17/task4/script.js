@@ -48,6 +48,9 @@ function initPhotoRotator(identificator, list) {
 
   btnPrev.disabled = true;
 
+if(imagesList.length==1 || imagesList.length==0) btnNext.disabled=true;
+
+
   btnPrev.addEventListener("click", () => {
     btnNext.disabled = false;
     i--;
