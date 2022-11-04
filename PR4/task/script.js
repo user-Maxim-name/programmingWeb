@@ -41,7 +41,9 @@ function displayLocation(position) {
   if (map == null) {
     map = L.map("map").setView([latitude, longitude], 13);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
-    L.marker([latitude, longitude]).addTo(map);
+    L.marker([latitude, longitude]).addTo(map).bindPopup(
+        `${new Date().toString()} <br /> Latiude: ${latitude} <br />Longitude ${longitude}`
+      );
   } else {
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
     L.marker([latitude, longitude])
