@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <div class="tabs">
+    <div class="tab-header">
+      <div class="tab-h active" data-tab="0">Border radius</div>
+      <div class="tab-h" data-tab="1">Text align</div>
+      <div class="tab-h" data-tab="2">Text decoration</div>
+    </div>
+
+
+
+<div class="tabContent">
+
+<div class="border_radius_app">
+  <div>Верхній лівий радіус:
+
+    <input type="range" id="rtl" min="0" max="100" value="0"   > 
+    <input type="text" id="ttl" value="0" disabled>
+        </div>
+ 
+
+
+
+
+
+      
+        <div>
+    Верхній правий радіус:
+    <input type="range" id="rtr" min="0" max="100" value="0"  >
+    <input type="text" id="ttr" value="0"  disabled>
+        </div>
+        
+        <div>
+    Нижній правий радіус:
+    <input type="range" id="rbr" min="0" max="100" value="0"  >
+    <input type="text" id="tbr" value="0" disabled>
+        </div>
+
+
+        <div>
+    Нижній лівий радіус:
+    <input type="range" id="rbl" min="0" max="100" value="0"  >
+    <input type="text" id="tbl" value="0" disabled>
+        </div>
+
+
+    <div id="block"></div>
+  <textarea></textarea>
+   
+</div>
+
+</div>
+
+<div class="tabContent">
+
+  <div class="text_align_app">
+ 
+  <span>Виберіть значення: </span> 
+  <select class="align_param">
+      <option value="left">Left</option>
+      <option value="right">Right</option>
+      <option value="justify">Justify</option>
+      <option value="center">Center</option>
+      <option value="start">Start</option>
+      <option value="end">End</option>
+      <option value="justify-all">Justify-all</option>
+    </select>
+    <p>text-align: left;</p>
+    <div class="container_align">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, dicta deserunt quam fuga non voluptate cumque obcaecati ab temporibus debitis corporis quos animi laudantium assumenda aperiam possimus? Harum, quo reiciendis?  
+    </div>
+    
+  </div>
+
+</div>
+
+<div class="tabContent">
+  <div class="text_decoration_app">
+
+
+
+    <span>Виберіть значення: </span>  <select class="decorate_value">
+   
+      <option value="none">None</option>
+      <option value="underline">Underline</option>
+      
+      <option value="overline">Overline</option>
+   
+      <option value="line-through">Line-through</option>
+      <option value="initial">Initial</option>
+       
+    
+    </select>
+    <p>text-decoration : none;</p>
+    <p class="decorated_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quis autem laboriosam quibusdam ullam unde amet, fugit nemo provident. Ad error aliquam praesentium recusandae nam soluta tempore, ducimus exercitationem eius?</p>
+  
+  
+  </div>
+
+</div>
+ 
+</div>
+
+ 
+<script src="script.js"></script>
+
+</body>
+</html>
