@@ -80,7 +80,8 @@ function createTaskElement(task) {
 
   spanTaskName.addEventListener("dblclick", showEdit);
 
-  containerTasks.appendChild(taskItem);
+   containerTasks.insertAdjacentElement("afterbegin", taskItem);
+  //containerTasks.appendChild(taskItem);
 }
 
 inputTask.addEventListener("keydown", (e) => {
