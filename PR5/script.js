@@ -71,6 +71,7 @@ function createTaskElement(task) {
   });
 
   spanRemove.addEventListener("click", (e) => {
+    if (!confirm("Точно видалити?")) return;
     containerTasks.removeChild(e.target.parentNode);
 
     delete tasks[e.target.parentElement.dataset.task];
