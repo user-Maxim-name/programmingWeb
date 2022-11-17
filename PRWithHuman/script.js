@@ -19,6 +19,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
 });
 
+
+
+modalWindow.addEventListener("click",(e)=>{
+  if(e.target.id=="modal_window"){
+
+    modalWindow.style.display = "none"
+  }
+})
+
 btnsToBasket.forEach((btn) => btn.addEventListener("click", addItemTobasket));
 
 function createModalWindow(content) {
