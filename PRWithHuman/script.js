@@ -19,11 +19,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
   }
 });
 
+ 
 
+function disableScroll() { document.body.style.overflow="hidden";  }
+function enableScroll() { document.body.style.overflow="initial";  }
 
 modalWindow.addEventListener("click",(e)=>{
   if(e.target.id=="modal_window"){
-
+	enableScroll();
     modalWindow.style.display = "none"
   }
 })
@@ -31,6 +34,7 @@ modalWindow.addEventListener("click",(e)=>{
 btnsToBasket.forEach((btn) => btn.addEventListener("click", addItemTobasket));
 
 function createModalWindow(content) {
+	disableScroll();
   modalWindow.firstElementChild.innerHTML = " ";
   modalWindow.firstElementChild.insertAdjacentElement("afterbegin", content);
   modalWindow.style.display = "flex";
@@ -201,7 +205,10 @@ function closeModal() {
 
   closeSpan.addEventListener(
     "click",
-    (e) => (modalWindow.style.display = "none")
+    (e) => {
+		enableScroll();
+		modalWindow.style.display = "none";
+	} 
   );
   return closeSpan;
 }
