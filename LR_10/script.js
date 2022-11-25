@@ -1,5 +1,4 @@
 let aboutProducts = [
-  
 ];
 
 const basket = document.querySelector(".basket");
