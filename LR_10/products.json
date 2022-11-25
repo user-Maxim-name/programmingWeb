@@ -1,0 +1,49 @@
+[{
+  "name": "Samsung UE43AU7100UXUA",
+  "salePrice": "null",
+  "price": "null",
+  "novelty": "true",
+  "topSale": "false",
+  "img": "https://content.rozetka.com.ua/goods/images/big/222749452.jpg",
+  "available": "false",
+  "chapter": "МАТЕМАТИКА",
+  "urlProduct": "https://rozetka.com.ua/samsung_ue43au7100uxua/p297596238/"
+},
+{
+   "name": "Samsung QE55Q80AAUXUA",
+  "salePrice": "39999",
+  "price": "42999",
+  "novelty": "false",
+  "topSale": "false",
+  "img": "https://content.rozetka.com.ua/goods/images/big/222749452.jpg",
+  "available": "true",
+  "chapter": "Подарунок",
+  "urlProduct": "https://rozetka.com.ua/samsung_qe55q80aauxua/p297618978/"
+
+},
+{
+   "name": "Philips 50PUS7556/12 (6722501)",
+  "salePrice": "14999",
+  "price": "16590",
+  "novelty": "false",
+  "topSale": "true",
+  "img": "https://content2.rozetka.com.ua/goods/images/big/261175862.jpg",
+  "available": "true",
+  "chapter": "Усний рахунок",
+  "urlProduct": "https://rozetka.com.ua/338695789/p338695789/"
+
+},
+
+{
+   "name": "Bravis LED-39G5000 + T2A",
+  "salePrice": "null",
+  "price": "4900",
+  "novelty": "false",
+  "topSale": "true",
+  "img": "https://content.rozetka.com.ua/goods/images/big/261176280.jpg",
+  "available": "true",
+  "chapter": "Букви та читання",
+  "urlProduct": "https://rozetka.com.ua/328756675/p328756675/"
+
+}
+]
